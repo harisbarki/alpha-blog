@@ -1,3 +1,14 @@
+<!--<h1>Create an article</h1>-->
+
+<% if @article.errors.any? %>
+<h2>The following errors prevented the article from getting created</h2>
+<ul>
+  <% @article.errors.full_messages.each do |msg|%>
+  <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +18,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <% flash.each do |name, msg| %>
+    <ul>
+      <li><%= msg %></li>
+    </ul>
+  <% end %>
 <%= yield %>
 
 </body>
