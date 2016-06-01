@@ -4,7 +4,7 @@
 @import "bootstrap";
 
 body {
-  background-color: #E3F2FD;
+  // background-color: #E3F2FD;
 }
 
 #logo {
@@ -42,6 +42,11 @@ body {
 .btn-xlarge {
   font-size: 1.7em;
   background-color: #00ACC1;
+}
+
+.article-meta-details {
+  border-top: 1px solid #eaeaea;
+  margin-top: 15px;
 }
 
 .article-actions {
